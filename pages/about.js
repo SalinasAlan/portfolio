@@ -106,14 +106,14 @@ const About = () => {
                         Here are some of the certificates I obtained at Platzi. 😁
                     </p>
                     <Certifications>
-                        <img src="/desarrolloWeb.png" alt="Desarrollo Web" />
-                        <img src="/cssgrid.png" alt="Css grid" />
-                        <img src="/responsiveDesign.png" alt="Responsive Design" />
-                        <img src="/htmlycss.png" alt="HTML y CSS" />
-                        <img src="/sass.png" alt="Sass" />
-                        <img src="/sistemasDeDisenio.png" alt="sistemas de diseño" />
-                        <img src="/sistemasDeDisenioo.png" alt="sistemas de diseño" />
-                        <img src="/bootstrap.png" alt="bootstrap" />
+                        <img src="/desarrolloWeb.PNG" alt="Desarrollo Web" />
+                        <img src="/cssgrid.PNG" alt="Css grid" />
+                        <img src="/responsiveDesign.PNG" alt="Responsive Design" />
+                        <img src="/htmlycss.PNG" alt="HTML y CSS" />
+                        <img src="/sass.PNG" alt="Sass" />
+                        <img src="/sistemasDeDisenio.PNG" alt="sistemas de diseño" />
+                        <img src="/sistemasDeDisenioo.PNG" alt="sistemas de diseño" />
+                        <img src="/bootstrap.PNG" alt="bootstrap" />
                     </Certifications>
                 </AboutSection>
             </AboutWrapper>
