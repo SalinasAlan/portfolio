@@ -32,11 +32,10 @@ const Img = styled.img`
 `;
 
 const TitleSpan = styled.span`
-    /* margin: 0; */
     color: ${props => props.theme.textColorSecondary};
 `
 
-const Home = ({ avatar, github }) => {
+const Home = ({ avatar }) => {
     return (
         <HomeWrapper>
             <TextWrapper>
@@ -45,9 +44,7 @@ const Home = ({ avatar, github }) => {
                 <p>I'M CURRENTLY STUDING MY LAST SEMESTER OF COMPUTACIONAL SYSTEMS ENGINEERING.</p>
                 <p>I'M A PASSIONATE ABOUT DEVELOPMENT, TECHNOLOGY AND STARTUP TOPICS.</p>
             </TextWrapper>
-            {/* <a href={github} target="_blank"> */}
-                <Img src={avatar} alt="Alan Salinas" />
-            {/* </a> */}
+            <Img src={avatar} alt="Alan Salinas" />
         </HomeWrapper >
     )
 }
