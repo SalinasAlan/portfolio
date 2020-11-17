@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 const ImageInfo = styled.div`
     width: 48%;
     margin-bottom: 20px;
-    padding-top: 20px; 
+    padding: 20px; 
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,6 +16,10 @@ const ImageInfo = styled.div`
         width: 100%;
     }
 `
+
+const ImageContainer = styled.div`
+    text-align: center;
+`;
 
 const ImageDescription = styled.p`
     width: 70%;
@@ -32,11 +38,18 @@ const ImageIcon = styled.div`
     }
 `
 
-const Image = ({ src, alt, desc, webSite, github }) => {
+const ImageComponent = ({ src, alt, desc, webSite, github }) => {
     return (
         <>
             <ImageInfo>
-                <img src={src} alt={alt} />
+                <ImageContainer>
+                    <Image
+                        src={src}
+                        alt={alt}
+                        unsized
+                    />
+                </ImageContainer>
+                {/* <img src={src} alt={alt} /> */}
                 <ImageDescription>{desc}</ImageDescription>
                 <ImageIcon className="image__icons">
                     {webSite !== "none" ? (
@@ -69,4 +82,4 @@ const Image = ({ src, alt, desc, webSite, github }) => {
     );
 }
 
-export default Image;
+export default ImageComponent;
