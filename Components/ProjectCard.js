@@ -38,7 +38,7 @@ const ImageIcon = styled.div`
     }
 `
 
-const ImageComponent = ({ src, alt, desc, webSite, github }) => {
+const ProjectCard = ({ src, alt, desc, webSite, github }) => {
     return (
         <>
             <ImageInfo>
@@ -49,7 +49,6 @@ const ImageComponent = ({ src, alt, desc, webSite, github }) => {
                         unsized
                     />
                 </ImageContainer>
-                {/* <img src={src} alt={alt} /> */}
                 <ImageDescription>{desc}</ImageDescription>
                 <ImageIcon className="image__icons">
                     {webSite !== "none" ? (
@@ -82,4 +81,4 @@ const ImageComponent = ({ src, alt, desc, webSite, github }) => {
     );
 }
 
-export default ImageComponent;
+export default ProjectCard;
