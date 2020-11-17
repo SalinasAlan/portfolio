@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../Components/Header';
 import Home from './home';
 
-const App = ({ avatar, github }) => {
+const App = ({ avatar }) => {
 	return (
 		<>
 			<Head>
@@ -11,18 +11,19 @@ const App = ({ avatar, github }) => {
 				<meta name="Description" content="Portafolio de Alan Salinas, desarrollador frontend"></meta>
 			</Head>
 			<Header />
-			<Home avatar={avatar} github={github} />
-		</>	
+			<Home avatar={avatar}/>
+		</>
 	);
 }
 
-App.getInitialProps = async () => {
+export async function getStaticProps() {
 	const res = await fetch('https://api.github.com/users/SalinasAlan')
 	const user = await res.json()
 
 	return {
-		avatar: user.avatar_url,
-		github: user.html_url
+		props: {
+			avatar: user.avatar_url
+		}
 	};
 }
 
