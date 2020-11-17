@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import Header from '../Components/Header'
+import Image from 'next/image'
 
 const AboutWrapper = styled.div`
     margin: 0;
@@ -33,29 +34,28 @@ const AboutSection = styled.section`
     }
 `;
 
+const Heading = styled.h1`
+    margin-top: 100px;
+`;
+
 const Certifications = styled.div`
     margin: auto auto;
     margin-top: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
 
-    & img {
-        width: 40%;
-        margin-bottom: 20px;
-    }
-
-    @media only screen and (max-width: 425px){
+    @media only screen and (max-width: 767px){
         width: 100%;
         display: block;
-
-        & img {
-            width: 100%;
-        }
     }
-
-
 `
+
+const StyledImage = styled(Image)`
+    padding: 0;
+    margin-bottom: 30px;
+`;
 
 const About = () => {
     return (
@@ -90,30 +90,89 @@ const About = () => {
                         reading books about startups, business topics and
                         programming.
                     </p>
+                    <Heading>My skills</Heading>
                     <p>
                         Some of the technologies that I use are: <br /> HTML,
-                        CSS, SASS, Boostrap, JS, React.js. And a little bit of Node, Mysql,
+                        CSS, SASS, JS, React.js, Styled-Components, GraphQL, Apollo and Next.js. 
+                        And a little bit of Node, Mysql,
                         Express.js, Java and MongoDB.
                     </p>
+                    <Heading>My hobbies</Heading>
                     <p>
                         I have other passions like...
                         <br />
                         Listen music 🎶 I really love listen music and apreciate every sound of a song.
                         <br />
-                        I enjoy play basketball. 
+                        I enjoy play basketball. 🏀
                     </p>
                     <p>
                         Here are some of the certificates I obtained at Platzi. 😁
                     </p>
                     <Certifications>
-                        <img src="/desarrolloWeb.PNG" alt="Desarrollo Web" />
-                        <img src="/cssgrid.PNG" alt="Css grid" />
-                        <img src="/responsiveDesign.PNG" alt="Responsive Design" />
-                        <img src="/htmlycss.PNG" alt="HTML y CSS" />
-                        <img src="/sass.PNG" alt="Sass" />
-                        <img src="/sistemasDeDisenio.PNG" alt="sistemas de diseño" />
-                        <img src="/sistemasDeDisenioo.PNG" alt="sistemas de diseño" />
-                        <img src="/bootstrap.PNG" alt="bootstrap" />
+                        <StyledImage
+                            src="/desarrolloWeb.PNG"
+                            alt="Desarrollo Web"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 25vw"
+                        />
+                        <StyledImage
+                            src="/cssgrid.PNG"
+                            alt="Css grid"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 25vw"
+                        />
+                        <StyledImage
+                            src="/responsiveDesign.PNG"
+                            alt="Responsive Design"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 25vw"
+                        />
+                        <StyledImage
+                            src="/htmlycss.PNG"
+                            alt="HTML y CSS"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 26vw"
+                        />
+                        <StyledImage
+                            src="/sass.PNG"
+                            alt="Sass"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 25vw"
+                        />
+                        <StyledImage
+                            src="/sistemasDeDisenio.PNG"
+                            alt="sistemas de diseño"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 26vw"
+                        />
+                        <StyledImage
+                            src="/sistemasDeDisenioo.PNG"
+                            alt="sistemas de diseño"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 26vw"
+                        />
+                        <StyledImage
+                            src="/bootstrap.PNG"
+                            alt="bootstrap"
+                            layout="fill"
+                            quality={100}
+                            unsized
+                            sizes="(max-width: 767px) 65vw, (min-width: 768px) 26vw"
+                        />
                     </Certifications>
                 </AboutSection>
             </AboutWrapper>
