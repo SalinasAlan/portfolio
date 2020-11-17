@@ -79,35 +79,35 @@ const Portfolio = () => {
                             github="https://github.com/SalinasAlan/WeatherApp"
                         />
                         <Image
-                            src="_D__Lap_Desarrollo_Books_index.html.png"
+                            src="/_D__Lap_Desarrollo_Books_index.html.png"
                             alt="Books"
                             desc="HTML, CSS, JS and Bootstrap 4."
                             webSite="https://salinasalan.github.io/Books/"
                             github="https://github.com/SalinasAlan/Books"
                         />
                         <Image
-                            src="_D__Lap_Desktop_Curso_Gl_index.html.png"
+                            src="/_D__Lap_Desktop_Curso_Gl_index.html.png"
                             alt="GDLWebCamp"
                             desc="HTML, CSS, JS, Bootstrap, JQuery and API of Maps"
                             webSite="https://salinasalan.github.io/gdlWebCamp/"
                             github="https://github.com/SalinasAlan/gdlWebCamp"
                         />
                         <Image
-                            src="bookapp-fullstack.herokuapp.com_.png"
+                            src="/bookapp-fullstack.herokuapp.com_.png"
                             alt="BookApp"
                             desc="Webpack, bootstrap4, node, Mongo, Heroku and Mongodb Atlas"
                             webSite="http://bookapp-fullstack.herokuapp.com/"
                             github="https://github.com/SalinasAlan/BookCards"
                         />
                         <Image
-                            src="salinasalan.github.io_Bootstrap4_.png"
+                            src="/salinasalan.github.io_Bootstrap4_.png"
                             alt="BookApp"
                             desc="HTML, CSS and bootstrap 4"
                             webSite="https://salinasalan.github.io/Bootstrap4/"
                             github="https://github.com/SalinasAlan/BookCards"
                         />
                         <Image
-                            src="Transitions-GoogleChrome2019-10.gif"
+                            src="/Transitions-GoogleChrome2019-10.gif"
                             alt="Transitions"
                             desc="HTML, CSS, JS, Parcel, Gsap."
                             webSite="none"
