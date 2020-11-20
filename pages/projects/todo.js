@@ -11,7 +11,7 @@ import {
     Heading,
     Heading2,
     Anchor
-} from './styledComponenteProject'
+} from './findMyRestaurant'
 
 const todo = () => {
     return (
