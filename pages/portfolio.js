@@ -60,7 +60,7 @@ const Portfolio = () => {
             <Head>
                 <title>Alan Salinas - Portfolio</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="Description" content="Portafolio de Alan Salinas, desarrollador frontend"></meta>
+                <meta name="Description" content="Portfolio de Alan Salinas, desarrollador frontend"></meta>
             </Head>
             <Header />
             <PortfolioWrapper>
