@@ -1,82 +1,82 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const ImageInfo = styled.div`
-    width: 48%;
+const CardInfo = styled.div`
+    width: 100%;
     margin-bottom: 20px;
-    padding: 20px; 
-    border-radius: 5px;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    background: rgba(255, 255, 255, 0.8);
+    color: white;
 
     @media only screen and (max-width: 425px){
         width: 100%;
+        display: block;
     }
 `
 
 const ImageContainer = styled.div`
+    width: 50%;
     text-align: center;
+
+    @media only screen and (max-width: 767px){
+        width: 100%;
+    }
 `;
 
-const ImageDescription = styled.p`
-    width: 70%;
-    text-align: center;
-`
+const ProjectDescription = styled.div`
+    width: 50%;
+    padding-left: 50px;
 
-const ImageIcon = styled.div`
-    flex-direction: row;
-    padding: 10px;
-    font-size: 3em;
-    text-decoration: none;
-
-    i {
-        margin: 40px;
-        color: $backgroundColor_app;
+    @media only screen and (max-width: 767px){
+        width: 100%;
+        padding-left: 10px;
+        text-align: left;
     }
 `
+const Description = styled.p`
+    margin-bottom: 30px;
+`;
 
-const ProjectCard = ({ src, alt, desc, webSite, github }) => {
+const LinkContainer = styled.div`
+    cursor: pointer;
+    display: flex;
+`;
+
+const Icon = styled.svg`
+    width: 20px;
+`;
+
+const ProjectCard = ({ title, srcImage, alt, desc, page }) => {
     return (
         <>
-            <ImageInfo>
+            <CardInfo>
                 <ImageContainer>
                     <Image
-                        src={src}
+                        src={srcImage}
                         alt={alt}
                         unsized
                     />
                 </ImageContainer>
-                <ImageDescription>{desc}</ImageDescription>
-                <ImageIcon className="image__icons">
-                    {webSite !== "none" ? (
-                        <a
-                            href={webSite}
-                            className="image__icon"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <i className="fas fa-globe"></i>
-                        </a>
-                    ) : (
-                            ""
-                        )}
-                    {github !== "none" ? (
-                        <a
-                            href={github}
-                            className="image__icon"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <i className="fab fa-github"></i>
-                        </a>
-                    ) : (
-                            ""
-                        )}
-                </ImageIcon>
-            </ImageInfo>
+                <ProjectDescription>
+                    <h2>
+                        {title}
+                    </h2>
+                    <Description>
+                        {desc}
+                    </Description>
+                    <LinkContainer>
+                        <Link href={page}>
+                            <a>
+                                VIEW PROJECT
+                            </a>
+                        </Link>
+                        <Icon xmlns="http://www.w3.org/2000/Icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </Icon>
+                    </LinkContainer>
+                </ProjectDescription>
+            </CardInfo>
         </>
     );
 }
