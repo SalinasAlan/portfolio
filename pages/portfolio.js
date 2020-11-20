@@ -38,9 +38,6 @@ const Title = styled.h1`
 
 const Proyects = styled.div`
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 
     img {
         align-self: center;
@@ -71,46 +68,18 @@ const Portfolio = () => {
                     <Title>My personal projects</Title>
                     <Proyects>
                         <ProjectCard
-                            src="/salinasalan.github.io_WeatherApp_.png"
-                            alt="temperature"
-                            desc="Javascript and API weather."
-                            webSite="https://salinasalan.github.io/WeatherApp/"
-                            github="https://github.com/SalinasAlan/WeatherApp"
+                            title="findMyRestaurant"
+                            srcImage="/findmyrestaurant2.png"
+                            alt="findMyRestaurant by Alan Salinas"
+                            desc="An aplication to find restaurants in CDMX, Mexico."
+                            page="/projects/findMyRestaurant"
                         />
                         <ProjectCard
-                            src="/_D__Lap_Desarrollo_Books_index.html.png"
-                            alt="Books"
-                            desc="HTML, CSS, JS and Bootstrap 4."
-                            webSite="https://salinasalan.github.io/Books/"
-                            github="https://github.com/SalinasAlan/Books"
-                        />
-                        <ProjectCard
-                            src="/_D__Lap_Desktop_Curso_Gl_index.html.png"
-                            alt="GDLWebCamp"
-                            desc="HTML, CSS, JS, Bootstrap, JQuery and API of Maps"
-                            webSite="https://salinasalan.github.io/gdlWebCamp/"
-                            github="https://github.com/SalinasAlan/gdlWebCamp"
-                        />
-                        <ProjectCard
-                            src="/bookapp-fullstack.herokuapp.com_.png"
-                            alt="BookApp"
-                            desc="Webpack, bootstrap4, node, Mongo, Heroku and Mongodb Atlas"
-                            webSite="http://bookapp-fullstack.herokuapp.com/"
-                            github="https://github.com/SalinasAlan/BookCards"
-                        />
-                        <ProjectCard
-                            src="/salinasalan.github.io_Bootstrap4_.png"
-                            alt="BookApp"
-                            desc="HTML, CSS and bootstrap 4"
-                            webSite="https://salinasalan.github.io/Bootstrap4/"
-                            github="https://github.com/SalinasAlan/BookCards"
-                        />
-                        <ProjectCard
-                            src="/Transitions-GoogleChrome2019-10.gif"
-                            alt="Transitions"
-                            desc="HTML, CSS, JS, Parcel, Gsap."
-                            webSite="none"
-                            github="https://github.com/SalinasAlan/Transitions"
+                            title="ToDo"
+                            srcImage="/todoAppImage2.png"
+                            alt="toDo by Alan Salinas"
+                            desc="ToDo to organize your tasks and store them in the cloud."
+                            page="/projects/todo"
                         />
                     </Proyects>
                 </PortfolioSection>
