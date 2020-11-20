@@ -21,7 +21,7 @@ const findMyRestaurant = () => {
             <Head>
                 <title>Project - findMyRestaurant</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="Description" content="todo is a personal project by Alan Salians to organize your tasks and store them in the cloud"></meta>
+                <meta name="Description" content="findMyRestaurant is a personal project by Alan Salians to find beautiful places to eat in CDMX"></meta>
             </Head>
             <Header />
             <ProjectWrapper>
