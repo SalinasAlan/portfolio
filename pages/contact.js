@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import Header from '../Components/Header';
+import * as gtag from '../lib/gtag'
 
 const ContactWrapper = styled.div`
     width: 100%;
@@ -75,6 +76,16 @@ const ContactIcons = styled.div`
 `
 
 const Contact = () => {
+
+
+    const openContact = (label) =>{
+        gtag.event({
+            action: 'hide-navbar',
+            category: 'Navbar',
+            label: label,
+        })
+    }
+
     return (
         <>
             <Head>
@@ -91,6 +102,7 @@ const Contact = () => {
                             href="https://github.com/SalinasAlan"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => openContact("github")}
                         >
                             <i className="fab fa-github"></i>
                         </a>
@@ -98,6 +110,7 @@ const Contact = () => {
                             href="https://twitter.com/alansalinas2"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => openContact("twitter")}
                         >
                             <i className="fab fa-twitter"></i>
                         </a>
@@ -105,6 +118,7 @@ const Contact = () => {
                             href="https://www.linkedin.com/in/alan-salinas-de-los-santos-53b3747a/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => openContact("linkedin")}
                         >
                             <i className="fab fa-linkedin-in"></i>
                         </a>
@@ -112,6 +126,7 @@ const Contact = () => {
                             href="https://www.instagram.com/alansdls.codes/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => openContact("instagram")}
                         >
                             <i className="fab fa-instagram"></i>
                         </a>

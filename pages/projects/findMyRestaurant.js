@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../../Components/Header'
 import styled from 'styled-components'
 import Image from 'next/image'
+import * as gtag from '../../lib/gtag'
 
 export const ProjectWrapper = styled.div`
     max-width: 100%;
@@ -80,6 +81,15 @@ export const StyledImage = styled(Image)`
 `;
 
 const findMyRestaurant = () => {
+
+    const openLink = (action, label) => {
+        gtag.event({
+            action: action,
+            category: 'findMyRestaurant',
+            label: label,
+        })
+    }
+
     return (
         <>
             <Head>
@@ -117,8 +127,9 @@ const findMyRestaurant = () => {
                             <Heading2>Code</Heading2>
                             <Text>You can see the code {' '}
                                 <Anchor
+                                    onClick={() => openLink('openGithubProject', 'Code')}                             
                                     href="https://github.com/SalinasAlan/dashboard"
-                                    target="_blank">here!
+                                    target="_blank">here!   
                                 </Anchor>
                             </Text>
                         </ProjectInfoItem>
@@ -127,6 +138,7 @@ const findMyRestaurant = () => {
                             <Text>
                                 Go and play with it {' '}
                                 <Anchor
+                                    onClick={() => openLink('openLiveProject', 'Live')}
                                     href="https://findmyrestaurant.vercel.app/"
                                     target="_blank">here!
                                 </Anchor>

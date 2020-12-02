@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components';
-
+import * as gtag from '../lib/gtag'
 import Navbar from './Navbar'
 
 const HeaderWrapper = styled.header`
@@ -49,8 +49,13 @@ const MenuButton = styled.button`
 const Header = () => {
 
     const showMenu = () => {
+        gtag.event({
+            action: 'show-navbar',
+            category: 'Header',
+            label: 'show',
+        })
         const navBar = document.getElementById("navbar");
-        if(navBar.className.includes("hide")){
+        if (navBar.className.includes("hide")) {
             const className = navBar.className.replace("hide", "show");
             navBar.className = className;
         }

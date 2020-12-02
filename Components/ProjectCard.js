@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import * as gtag from '../lib/gtag';
 
 const CardInfo = styled.div`
     width: 100%;
@@ -48,6 +49,16 @@ const Icon = styled.svg`
 `;
 
 const ProjectCard = ({ title, srcImage, alt, desc, page }) => {
+
+    const viewProject = (label) => {
+        const finalLabel = label.replace('/projects/', '');
+        gtag.event({
+            action: 'view-project',
+            category: 'Portfolio',
+            label: finalLabel,
+        })
+    }
+
     return (
         <>
             <CardInfo>
@@ -67,7 +78,7 @@ const ProjectCard = ({ title, srcImage, alt, desc, page }) => {
                     </Description>
                     <LinkContainer>
                         <Link href={page}>
-                            <a>
+                            <a onClick={() => viewProject(page)}>
                                 VIEW PROJECT
                             </a>
                         </Link>

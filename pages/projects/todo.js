@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../../Components/Header'
+import * as gtag from '../../lib/gtag'
 import {
     ProjectWrapper,
     ProjectSection,
@@ -14,6 +15,15 @@ import {
 } from './findMyRestaurant'
 
 const todo = () => {
+
+    const openLink = (action, label) => {
+        gtag.event({
+            action: action,
+            category: 'todo',
+            label: label,
+        })
+    }
+
     return (
         <>
             <Head>
@@ -50,6 +60,7 @@ const todo = () => {
                             <Heading2>Code</Heading2>
                             <Text>You can see the code {' '}
                                 <Anchor
+                                    onClick={() => openLink('openGithubProject', 'Code')}
                                     href="https://github.com/SalinasAlan/Todo"
                                     target="_blank">here!
                                 </Anchor>
@@ -60,6 +71,7 @@ const todo = () => {
                             <Text>
                                 Go and play with it {' '}
                                 <Anchor
+                                    onClick={() => openLink('openLiveProject', 'Live')}
                                     href="https://todo-lyart.vercel.app/"
                                     target="_blank">here!
                                 </Anchor>
@@ -108,8 +120,8 @@ const todo = () => {
                     <Heading>Lessons learned</Heading>
                     <Text>
                         When I was reading about auth, I found a video of a cool guy that explain
-                        this process and that open my mind to understand more about how store cookies. Also, I 
-                        found a library for Next.js call NextAuth.js which integret a lot of authentication 
+                        this process and that open my mind to understand more about how store cookies. Also, I
+                        found a library for Next.js call NextAuth.js which integret a lot of authentication
                         providers like Auth0 or do it with databases and I want to taste it in next projects.
                     </Text>
                 </ProjectSection>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import * as gtag from '../lib/gtag'
 
 const NavbarWrapper = styled.nav`
     width: 100%;
@@ -96,7 +97,12 @@ const HideButton = styled.button`
 
 const Navbar = () => {
 
-    const hideMenu = () => {
+    const hideMenu = (label) => {
+        gtag.event({
+            action: 'hide-navbar',
+            category: 'Navbar',
+            label: label,
+        })
         const navBar = document.getElementById("navbar");
         if (navBar.className.includes("show")) {
             const classNameHide = navBar.className.replace("show", "hide");
@@ -106,24 +112,24 @@ const Navbar = () => {
 
     return (
         <NavbarWrapper className="hide" id="navbar">
-            <HideButton onClick={hideMenu}>-</HideButton>
+            <HideButton onClick={() => hideMenu("hide-button")}>-</HideButton>
             <List>
-                <ListItem onClick={hideMenu}>
+                <ListItem onClick={() => hideMenu("home-button")}>
                     <Link href="/">
                         <Item>Home</Item>
                     </Link>
                 </ListItem>
-                <ListItem onClick={hideMenu}>
+                <ListItem onClick={() => hideMenu("about-button")}>
                     <Link href="/about">
                         <Item>About</Item>
                     </Link>
                 </ListItem>
-                <ListItem onClick={hideMenu}>
+                <ListItem onClick={() => hideMenu("portfolio-button")}>
                     <Link href="/portfolio">
                         <Item>Portfolio</Item>
                     </Link>
                 </ListItem>
-                <ListItem onClick={hideMenu}>
+                <ListItem onClick={() => hideMenu("contact-button")}>
                     <Link href="/contact">
                         <Item>Contact</Item>
                     </Link>
