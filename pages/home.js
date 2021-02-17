@@ -41,7 +41,7 @@ const Home = ({ avatar }) => {
             <TextWrapper>
                 <h1>HI, I'M <TitleSpan>ALAN SALINAS</TitleSpan>.</h1>
                 <p>I'M FRONTEND DEVELOPER.</p>
-                <p>I'M CURRENTLY STUDING MY LAST SEMESTER OF COMPUTACIONAL SYSTEMS ENGINEERING.</p>
+                <p>I'VE FINISHED MY LAST SEMESTER OF COMPUTACIONAL SYSTEMS ENGINEERING.</p>
                 <p>I'M A PASSIONATE ABOUT DEVELOPMENT, TECHNOLOGY AND STARTUP TOPICS.</p>
             </TextWrapper>
             <Img src={avatar} alt="Alan Salinas" />

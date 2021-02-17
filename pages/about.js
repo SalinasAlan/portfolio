@@ -69,7 +69,7 @@ const About = () => {
             <AboutWrapper>
                 <AboutSection>
                     <p>
-                        <span>Hi,</span> I’m Alan Salinas
+                        I’m Alan Salinas
                         <br /> I appreciate the time that you take for visiting
                         my website. ✌
                     </p>
