@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import * as gtag from '../lib/gtag'
 import Navbar from './Navbar'
 
@@ -32,6 +32,11 @@ const Icon = styled.h1`
     }
 
 `
+const buttonIntermittent = keyframes`
+    0%, 100% { text-shadow: 0px 0px 20px white }
+    50% { text-shadow: 0px 0px 0px white }
+`;
+
 const MenuButton = styled.button`
     color: #f2f4f4;
     font-size: 2em;
@@ -40,6 +45,7 @@ const MenuButton = styled.button`
     border: none;
     background: transparent;
     outline: 0;
+    animation: infinite ${buttonIntermittent} 2s;
 
     @media only screen and (min-width: 2560px) {
         font-size: 5em;
